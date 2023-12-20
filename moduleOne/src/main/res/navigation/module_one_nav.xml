@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/module_one_nav"
+    app:startDestination="@id/fragmentOneMO">
+
+    <fragment
+        android:id="@+id/fragmentOneMO"
+        android:name="com.keepcalling.moduleone.FragmentOneMO"
+        android:label="FragmentOneMO"
+        tools:layout="@layout/fragment_one">
+        <action
+            android:id="@+id/action_fragmentOneMO_to_fragmentTwoMO"
+            app:destination="@id/fragmentTwoMO"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwoMO"
+        android:name="com.keepcalling.moduleone.FragmentTwoMO"
+        android:label="FragmentTwoMO"
+        tools:layout="@layout/fragment_two">
+        <action
+            android:id="@+id/action_fragmentTwoMO_to_fragmentThreeMO"
+            app:destination="@id/fragmentThreeMO" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentThreeMO"
+        android:name="com.keepcalling.moduleone.FragmentThreeMO"
+        android:label="FragmentThreeMO"
+        tools:layout="@layout/fragment_three"/>
+</navigation>

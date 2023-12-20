@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentOne">
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.keepcalling.modulenavigation.FragmentOne"
+        android:label="FragmentOne"
+        tool:layout="@layout/fragment_one_app">
+        <action
+            android:id="@+id/action_fragmentOne_to_module_one_nav"
+            app:destination="@id/module_one_nav" />
+        <action
+            android:id="@+id/action_fragmentOne_to_module_two_nav"
+            app:destination="@id/module_two_nav" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="android-app://com.keepcalling/fragment_one_app" />
+    </fragment>
+
+    <include app:graph="@navigation/module_one_nav" />
+    <include app:graph="@navigation/module_two_nav" />
+
+</navigation>

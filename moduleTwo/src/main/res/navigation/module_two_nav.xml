@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/module_two_nav"
+    app:startDestination="@id/fragmentOneMT">
+
+    <fragment
+        android:id="@+id/fragmentOneMT"
+        android:name="com.keepcalling.moduletwo.FragmentOneMT"
+        android:label="FragmentOneMT">
+        <action
+            android:id="@+id/action_fragmentOneMT_to_fragmentTwoMT"
+            app:destination="@id/fragmentTwoMT" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="android-app://com.keepcalling/fragment_one_mt" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwoMT"
+        android:name="com.keepcalling.moduletwo.FragmentTwoMT"
+        android:label="FragmentTwoMT" >
+        <action
+            android:id="@+id/action_fragmentTwoMT_to_fragmentThreeMT"
+            app:destination="@id/fragmentThreeMT" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentThreeMT"
+        android:name="com.keepcalling.moduletwo.FragmentThreeMT"
+        android:label="FragmentThreeMT" />
+</navigation>
